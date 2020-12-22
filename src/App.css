@@ -1,38 +1,99 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  font-size: calc(10px + 2vmin);
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.dice-container {
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
+.Dice {
+  margin: 10px;
+}
+
+.Dice i {
+  font-size: 5em;
+}
+
+.Dice.rolling {
+  animation-name: dice-roll;
+  animation-duration: 0.2s;
+  animation-iteration-count: 10;
+  animation-timing-function: ease-in;
+}
+
+.Graph {
+  margin: 20px;
+}
+
+.Graph .display {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 120px;
+  width: 320px;
+  overflow: hidden;
+  border: 1px solid white;
+  border-radius: 6px;
+}
+
+.Graph-bar {
+  flex: 1 30px;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.Graph-bar .bar {
+  background-color: #664488;
+}
+
+.Graph p {
+  margin: 1px;
+}
+
+.Graph .legend {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Graph .legend p {
+  flex: 1 30px;
+  font-size: 0.7em;
+}
+
+.Graph .legend + p {
+  font-size: 0.7em;
+}
+
+button {
+  height: 1.6em;
+  width: 5em;
+  margin: 20px;
+  border-radius: 10px;
+  font-size: 1.4em;
+}
+
+@keyframes dice-roll {
+  0% {
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: rotate(7deg) translate(7px, 2px);
+  }
+  75% {
+    transform: rotate(-7deg) translate(-7px, -2px);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
