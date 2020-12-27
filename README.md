@@ -3,11 +3,18 @@
 A small React exercise that demonstartes basic React principles.
 Throws 2 dice and shows frequencies for random outcomes.
 
+![dice-roller app](./dice-roller.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Technologies
+
+- JavaScript
+- React
 
 ## Available Scripts
 
-In the project directory, you can run:
+After `npm install` in the project directory, you can run:
 
 ### `yarn start`
 
