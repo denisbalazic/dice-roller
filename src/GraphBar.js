@@ -6,7 +6,7 @@ export default class GraphBar extends Component {
     return (
       <div className="Graph-bar">
         <p>{freq}</p>
-        <div className="bar" style={{ height: `${share * 200}%` }}></div>
+        <div className="bar" style={{ height: `${share * 180}%` }}></div>
       </div>
     );
   }
